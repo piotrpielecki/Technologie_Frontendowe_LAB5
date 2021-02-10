@@ -26,7 +26,7 @@ app.post('/auth/login', cors(), (request, response) => {
 		if (users[login].password != password) {
 			response.json({logged: false, message: `Password is not valid.`});
 		} else {
-			response.json({logged: true, message: `User login success ${login}.`});
+			response.json({logged: true, message: `User login success ${login}.`, user: login});
 		}
 	}
 });
