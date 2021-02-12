@@ -53,6 +53,16 @@ table th {
     color: white;
 }
 
-#content {
+.row {
+    max-height: 30vh;
+}
 
+.col-2 img {
+    max-width: 100%;
+}
+
+.comment{
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 1rem;
 }

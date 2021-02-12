@@ -36,4 +36,14 @@ function AjaxService() {
         xmlhttp.setRequestHeader("Content-Type", "application/json");
         xmlhttp.send(JSON.stringify(config.data));
     };
+
+    this.delete = function (config) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function (e) {
+            handleResponse(this, e, config);
+        };
+        xmlhttp.open("DELETE", config.url, true);
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+        xmlhttp.send(JSON.stringify(config.data));
+    };
 }
