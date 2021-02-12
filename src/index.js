@@ -44,7 +44,6 @@ function logout() {
     document.getElementById("loginPanel").style.display = "block";
     document.getElementById("appPanel").style.display = "none";
     document.getElementById("header").innerHTML = "Logowanie";
-    document.getElementById("addNewNewsBtn").style.display = "none";
 }
 
 function showUserDetails(login) {
@@ -59,7 +58,6 @@ function showUserDetails(login) {
             document.getElementById("appPanel").style.display = "block";
             document.getElementById("logOutBtn").style.display = "block";
             document.getElementById("header").innerHTML = "Lista newsów";
-            document.getElementById("addNewNewsBtn").style.display = "block";
         }
     });
     showNewsList();
@@ -98,52 +96,52 @@ function showNewsList() {
                                     '<span>Czy jesteś pewny że chcesz usunąć tego newsa?</span>'+
                                 '</div>'+
                                 '<div class="modal-footer">'+
-                                    '<button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>'+
-                                    '<button type="button" news-id="'+news.id+'" class="btn btn-danger deleteCloseModal">Usuń</button>'+
+                                    '<a href="#" class="btn btn-default" data-dismiss="modal">Anuluj</a>'+
+                                    '<a href="#" news-id="'+news.id+'" class="btn btn-danger deleteModal">Usuń</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
-                    '</div>'+
+                    '</div>'//+
 
 
-                    '<div class="modal fade" id="newsEditModal-'+news.id+'" tabindex="-1" aria-labelledby="newsEditModalLabel-'+news.id+'" aria-hidden="true">'+
-                        '<div class="modal-dialog">'+
-                            '<div class="modal-content">'+
-                                '<div class="modal-header">'+
-                                '<h3 class="modal-title" id="newsEditModalLabel-'+news.id+'">Edytowanie newsa - '+news.title+'</h3>'+
-                                '<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>'+
-                                '</div>'+
-                                '<div class="modal-body">'+
-                                    '<form>'+
-                                    '<div class="form-group">'+
-                                        '<label for="title"><strong>Tytuł</strong></label>'+
-                                        '<input type="text" class="form-control" placeholder="Podaj tytuł" name="title-'+news.id+'" value="'+news.title+'" required>'+
-                                    '</div>'+
-                                    '<div class="form-group">'+
-                                        '<label for="header"><strong>Header</strong></label>'+
-                                        '<input type="text" class="form-control" placeholder="Podaj header" name="header-'+news.id+'" value="'+news.header+'" required>'+
-                                    '</div>'+
-                                    '<div class="form-group">'+
-                                        '<label for="content"><strong>Treść</strong></label>'+
-                                        '<input type="text" class="form-control" placeholder="Podaj treść" name="content-'+news.id+'" value="'+news.content+'" required> '+
-                                    '</div>'+
-                                    '<div class="form-group">'+
-                                    '<label for="author"><strong>Autor</strong></label>'+
-                                        '<input type="text" class="form-control" placeholder="Podaj autora" name="author-'+news.id+'" value="'+news.author+'" required> '+
-                                    '</div>'+
-                                    '<div class="form-group">'+
-                                        '<label for="img"><strong>Zdjęcie</strong></label>'+
-                                        '<input type="text" class="form-control" placeholder="Podaj ścieżkę do zdjęcia(np. gifs/nazwa.jpg)" name="img-'+news.id+'" value="'+news.img+'" > '+
-                                    '</div>'+
-                                '</form>'+
-                                '</div>'+
-                                '<div class="modal-footer">'+
-                                    '<button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>'+
-                                    '<button type="button" news-id="'+news.id+'" class="btn btn-warning editCloseModal">Edytuj</button>'+
-                                '</div>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'
+                    // '<div class="modal fade" id="newsEditModal-'+news.id+'" tabindex="-1" aria-labelledby="newsEditModalLabel-'+news.id+'" aria-hidden="true">'+
+                    //     '<div class="modal-dialog">'+
+                    //         '<div class="modal-content">'+
+                    //             '<div class="modal-header">'+
+                    //             '<h3 class="modal-title" id="newsEditModalLabel-'+news.id+'">Edytowanie newsa - '+news.title+'</h3>'+
+                    //             '<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>'+
+                    //             '</div>'+
+                    //             '<div class="modal-body">'+
+                    //                 '<form>'+
+                    //                 '<div class="form-group">'+
+                    //                     '<label for="title"><strong>Tytuł</strong></label>'+
+                    //                     '<input type="text" class="form-control" placeholder="Podaj tytuł" name="title-'+news.id+'" value="'+news.title+'" required>'+
+                    //                 '</div>'+
+                    //                 '<div class="form-group">'+
+                    //                     '<label for="header"><strong>Header</strong></label>'+
+                    //                     '<input type="text" class="form-control" placeholder="Podaj header" name="header-'+news.id+'" value="'+news.header+'" required>'+
+                    //                 '</div>'+
+                    //                 '<div class="form-group">'+
+                    //                     '<label for="content"><strong>Treść</strong></label>'+
+                    //                     '<input type="text" class="form-control" placeholder="Podaj treść" name="content-'+news.id+'" value="'+news.content+'" required> '+
+                    //                 '</div>'+
+                    //                 '<div class="form-group">'+
+                    //                 '<label for="author"><strong>Autor</strong></label>'+
+                    //                     '<input type="text" class="form-control" placeholder="Podaj autora" name="author-'+news.id+'" value="'+news.author+'" required> '+
+                    //                 '</div>'+
+                    //                 '<div class="form-group">'+
+                    //                     '<label for="img"><strong>Zdjęcie</strong></label>'+
+                    //                     '<input type="text" class="form-control" placeholder="Podaj ścieżkę do zdjęcia(np. gifs/nazwa.jpg)" name="img-'+news.id+'" value="'+news.img+'" > '+
+                    //                 '</div>'+
+                    //             '</form>'+
+                    //             '</div>'+
+                    //             '<div class="modal-footer">'+
+                    //                 '<button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>'+
+                    //                 '<button type="button" news-id="'+news.id+'" class="btn btn-warning editModal">Edytuj</button>'+
+                    //             '</div>'+
+                    //         '</div>'+
+                    //     '</div>'+
+                    // '</div>'
                     ;
                     getCommentsForNews(news);
             });
@@ -173,7 +171,10 @@ function deleteNews(news) {
     ajaxService.delete({
         url: `http://127.0.0.1:8088/news/remove/${news}`,
         success: function (response) {
-            console.log('Usunięto newsa: '+news);
+            if (response.message == "News removed.") {
+                setTimeout(300);
+                location.reload();
+            }
         }
     });
 }
@@ -190,6 +191,7 @@ function addNews(payload) {
         },
         success: function (response) {
             if (response.message === 'News created.') {
+                setTimeout(300);
                 location.reload();
             }
         }
@@ -209,8 +211,10 @@ function editNews(payload) {
         },
         success: function (response) {
             if (response.message === 'News updated.') {
+                setTimeout(300);
                 location.reload();
             }
+            
         }
     });
 }
@@ -222,44 +226,48 @@ function showMessage(message) {
 document.addEventListener("DOMContentLoaded", init);
 
 $(function () {
-    $('.deleteCloseModal').on('click', function (event) {
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-        let news_id = event.target.getAttribute("news-id");
-        deleteNews(news_id);
-        location.reload();
+    document.querySelectorAll('.deleteModal').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            let news_id = event.target.getAttribute("news-id");
+            deleteNews(news_id);
+            location.reload();
+        })
     });
-    $('.editCloseModal').on('click', function (event) {
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-        console.log(event);
-        //let news_id = event.target.getAttribute("news-id");
-        // let title = $('input[name="title'+news_id+'"]').val();
-        // let header = $('input[name="header'+news_id+'"]').val();
-        // let content = $('input[name="content'+news_id+'"]').val();
-        // let author = $('input[name="author'+news_id+'"]').val();
-        // let img = $('input[name="img'+news_id+'"]').val();
-        // console.log(title);
-        // console.log(header);
-        // console.log(content);
-        // console.log(author);
-        // console.log(img);
-        // let payload = {
-        //     "id": news_id,
-        //     "title": title,
-        //     "header": header,
-        //     "content": content,
-        //     "author": author,
-        //     "img": img
-        // };
-        // if (img === '') {
-        //     payload.img = 'gifs/n.png';
-        // }
-        //editNews(payload);
-        //location.reload();
-    });
+    // document.querySelectorAll('.editModal').forEach(item => {
+    //     item.addEventListener('click', event => {
+    //         event.preventDefault();
+    //         console.log(event);
+    //         let news_id = event.target.getAttribute("news-id");
+    //         let title = $('input[name="title'+news_id+'"]').val();
+    //         let header = $('input[name="header'+news_id+'"]').val();
+    //         let content = $('input[name="content'+news_id+'"]').val();
+    //         let author = $('input[name="author'+news_id+'"]').val();
+    //         let img = $('input[name="img'+news_id+'"]').val();
+    //         console.log(title);
+    //         console.log(header);
+    //         console.log(content);
+    //         console.log(author);
+    //         console.log(img);
+    //         let payload = {
+    //             "id": news_id,
+    //             "title": title,
+    //             "header": header,
+    //             "content": content,
+    //             "author": author,
+    //             "img": img
+    //         };
+    //         if (img === '') {
+    //             payload.img = 'gifs/n.png';
+    //         }
+    //         editNews(payload);
+    //     })
+    // });
+    // $('.editModal').on('click', function (event) {
+        
+    // });
 
-    $('#newsAdd').on('click', function (event) {
+    $('#newsAdd').on('click', function () {
         let title = $('input[name="title"]').val();
         let header = $('input[name="header"]').val();
         let content = $('input[name="content"]').val();

@@ -41,47 +41,7 @@
             <div class="col-10">
                 <h1 id="header">Logowanie</h1>
             </div>
-            <div class="col-2">
-                <a href="#" style="display: none;" id="addNewNewsBtn" class="btn btn-primary" data-toggle="modal" data-target="#newsAddModal">Dodaj newsa</a>
-            </div>
-            <div class="modal fade" id="newsAddModal" tabindex="-1" aria-labelledby="newsAddModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="newsAddModalLabel">Dodawanie newsa...</h5>
-                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                            <label for="title"><strong>Tytuł</strong></label>
-                            <input type="text" class="form-control" placeholder="Podaj tytuł" name="title" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="header"><strong>Header</strong></label>
-                            <input type="text" class="form-control" placeholder="Podaj header" name="header" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="content"><strong>Treść</strong></label>
-                            <input type="text" class="form-control" placeholder="Podaj treść" name="content" required> 
-                        </div>
-                        <div class="form-group">
-                         <label for="author"><strong>Autor</strong></label>
-                            <input type="text" class="form-control" placeholder="Podaj autora" name="author" required> 
-                        </div>
-                        <div class="form-group">
-                            <label for="img"><strong>Zdjęcie</strong></label>
-                            <input type="text" class="form-control" placeholder="Podaj ścieżkę do zdjęcia(np. gifs/nazwa.jpg)" name="img" > 
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                      <button type="button" id="newsAdd" class="btn btn-primary">Dodaj newsa</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
         </div>
         
     </div>
@@ -94,6 +54,52 @@
             <div id="message"></div>
         </div>
         <div id="appPanel" class="panel container" style="display: none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-2">
+                        <a href="#" id="addNewNewsBtn" class="btn btn-primary" data-toggle="modal" data-target="#newsAddModal">Dodaj newsa</a>
+                    </div>
+                    <div class="modal fade" id="newsAddModal" tabindex="-1" aria-labelledby="newsAddModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="newsAddModalLabel">Dodawanie newsa...</h5>
+                              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group">
+                                    <label for="title"><strong>Tytuł</strong></label>
+                                    <input type="text" class="form-control" placeholder="Podaj tytuł" name="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="header"><strong>Header</strong></label>
+                                    <input type="text" class="form-control" placeholder="Podaj header" name="header" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="content"><strong>Treść</strong></label>
+                                    <input type="text" class="form-control" placeholder="Podaj treść" name="content" required> 
+                                </div>
+                                <div class="form-group">
+                                 <label for="author"><strong>Autor</strong></label>
+                                    <input type="text" class="form-control" placeholder="Podaj autora" name="author" required> 
+                                </div>
+                                <div class="form-group">
+                                    <label for="img"><strong>Zdjęcie</strong></label>
+                                    <input type="text" class="form-control" placeholder="Podaj ścieżkę do zdjęcia(np. gifs/nazwa.jpg)" name="img" > 
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                              <button type="button" id="newsAdd" class="btn btn-primary">Dodaj newsa</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
             <div id="content">
                
 
